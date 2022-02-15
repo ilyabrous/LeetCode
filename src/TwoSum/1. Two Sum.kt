@@ -1,3 +1,5 @@
+package TwoSum
+
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val arr = mutableListOf<Int>()
