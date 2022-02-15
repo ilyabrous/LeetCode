@@ -17,20 +17,16 @@ class Solution {
         return stack.size == 0
     }
 
-    private fun isCorrect(charOne: Char, charSecond: Char): Boolean {
-        return when (charOne) {
+    private fun isCorrect(charOne: Char, charSecond: Char): Boolean = when (charOne) {
             '{' -> charSecond == '}'
             '(' -> charSecond == ')'
             '[' -> charSecond == ']'
             else -> false
-        }
-
     }
 }
 
 fun main() {
     val arr = "()[][][][][[{}]]"
-
 
     println(Solution().isValid(arr))
 }
