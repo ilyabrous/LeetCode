@@ -5,14 +5,14 @@ class Solution {
 
     fun isValid(s: String): Boolean {
         val arr = s.toCharArray()
-        for (i in arr.indices) {
+        for (char in arr) {
             if (stack.isNotEmpty()) {
-                if (isCorrect(stack.first(), arr[i])) {
+                if (isCorrect(stack.first(), char)) {
                     stack.removeFirst()
                     continue
                 }
             }
-            stack.addFirst(arr[i])
+            stack.addFirst(char)
         }
         return stack.size == 0
     }
@@ -29,7 +29,7 @@ class Solution {
 }
 
 fun main() {
-    val arr = "()[][][][](())))[[{}]]"
+    val arr = "()[][][][][[{}]]"
 
 
     println(Solution().isValid(arr))
